@@ -285,6 +285,40 @@ Feature: Link study sessions to coursework
 | FR-007 | G5 | AC-010, AC-011 |
 | FR-008 | G5 | AC-011 |
 
-## Scope and Decisions to Confirm
+# Nonfunctional Requirements
+
+These quality attributes and constraints follow from the Description, Domain Model operational rules, Goals, and Acceptance Criteria. They constrain how StudyTrack must behave beyond the functional requirements.
+
+| ID | Requirement | Priority | Derivation |
+| --- | --- | --- | --- |
+| NFR-001 | **Persistence:** All successfully saved courses, assignments, subtasks, study sessions, and study-time records must remain available after a full page reload. | P1 (Critical) | Description (first version stores entered information persistently); Operational Rule 1; AC-001; AC-010. |
+| NFR-002 | **Data integrity on failure:** A failed create, update, or delete must leave existing stored data unchanged. Conflicted or invalid proposals must not be written. | P1 (Critical) | Operational Rule 1; Rule 3 (conflicting sessions cannot be saved); AC-005; AC-006; AC-010; AC-012. |
+| NFR-003 | **Temporal correctness:** Overdue detection, session overlap checks, and planned/actual duration math must use the application's displayed local date and time and the operational rules for overlap, endpoints, and minutes. | P1 (Critical) | Operational Rules 2, 3, 5, and 6; AC-005; AC-006; AC-007; AC-011. |
+| NFR-004 | **Aggregation accuracy:** Progress dashboard counts must be assignment-based (not subtask-based). Planned and actual study-time totals for a selected reporting period must use the same period and display units in minutes. | P1 (Critical) | Goal G5; Operational Rules 5 and 6; FR-006; FR-008; AC-009; AC-011. |
+| NFR-005 | **Actionable validation feedback:** When a save is rejected (conflict, invalid times, nonpositive duration, course/assignment mismatch) or a delete would cascade, the student must receive a clear message; rejected session proposals remain editable; cascade deletes require confirmation. | P2 (High) | Operational Rules 3 and 7; AC-002; AC-005; AC-006; AC-010; AC-012. |
+| NFR-006 | **Standalone operation:** StudyTrack must operate without Canvas, Google Calendar, email, LMS, or other external system integrations. | P2 (High) | Description (no external integrations); Goals limited to student-entered data. |
+| NFR-007 | **Single-student scope:** The first version supports exactly one student user and does not require multi-user accounts, role separation, or concurrent shared editing. | P2 (High) | Description; Actors (sole user in the first version). |
+| NFR-008 | **Browser-accessible web UI:** All in-scope features must be usable through a standard web browser without a native desktop or mobile app. | P3 (Medium) | Description (standalone web application); acceptance scenarios assume page/views such as coursework, weekly calendar, and progress dashboard. |
+| NFR-009 | **Comparable study-time presentation:** Planned-versus-actual comparison must be labeled as study-time information, not as a performance grade or academic evaluation. | P3 (Medium) | Goal G5; AC-011 (comparison labeled as study-time information, not a performance grade). |
+
+### Priority rationale
+
+1. **P1** items directly block multiple acceptance criteria if unmet (reload persistence, no silent corruption, correct overdue/conflict/totals).
+2. **P2** items encode product boundaries from the Description and Actors and the usability of failed or destructive operations required by the ACs.
+3. **P3** items shape delivery medium and presentation tone but do not introduce new domain objects.
+
+# Non-Goals
+
+The following are explicitly out of scope for StudyTrack's first version (from Description and Goals):
+
+1. University course registration or enrollment systems.
+2. Grading, grade calculation, or official academic evaluation.
+3. Assignment submission to instructors or learning management systems.
+4. Instructor or peer communication.
+5. Integration with Canvas, Google Calendar, email, or other external systems.
+6. Multi-student accounts, authentication providers, or shared schedules (beyond the single local student in v1).
+7. Inferring actual study time from elapsed calendar time without a student-entered study-time record (Operational Rule 5).
+
+# Scope and Decisions to Confirm
 
 Project 1 leaves certain details open. They are deliberately not presented as established requirements here: exact priority choices (for example Low/Medium/High), maximum input lengths, account authentication approach for the single student, whether study sessions can cross midnight, handling of daylight-saving transitions, precise default calendar week start, and whether subtasks have independent completion status. These choices should be settled before implementation and can be added to this specification without expanding StudyTrack's core features.
