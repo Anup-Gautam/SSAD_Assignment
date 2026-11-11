@@ -1,0 +1,33 @@
+:root {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #1c1917;
+  background: #faf7f2;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+nav {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem;
+}
+
+button {
+  font: inherit;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #1c1917;
+  background: #fff;
+}
+
+button[aria-current="page"] {
+  background: #1c1917;
+  color: #fff;
+}
