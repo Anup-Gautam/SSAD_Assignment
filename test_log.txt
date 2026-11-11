@@ -1,0 +1,354 @@
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm.
+
+> studytrack@0.0.0 test
+> vitest run
+
+
+ RUN  v4.1.12 /Users/anupgautam/Desktop/UNO Omha/Assignments/Softwaer Specifics and Design/Proj-2_Anup/SSAD_Assignment
+
+ ❯ tests/extra.test.ts (9 tests | 9 failed) 3ms
+   × test_extra_different_dates 2ms
+   × test_extra_unknown_id 0ms
+   × test_extra_reschedule_conflict 0ms
+   × test_extra_invalid_priority 0ms
+   × test_extra_missing_deadline 0ms
+   × test_extra_empty_filter 0ms
+   × test_extra_subtasks_not_counted 0ms
+   × test_extra_actual_not_inferred 0ms
+   × test_extra_delete_session 0ms
+ ❯ tests/acceptance.test.ts (15 tests | 15 failed) 6ms
+   × test_AC001 2ms
+   × test_AC002 0ms
+   × test_AC002_confirm 0ms
+   × test_AC003 0ms
+   × test_AC004 0ms
+   × test_AC005 0ms
+   × test_AC006 0ms
+   × test_AC007 0ms
+   × test_AC008 0ms
+   × test_AC009 0ms
+   × test_AC010 0ms
+   × test_AC010_reject 0ms
+   × test_AC011 0ms
+   × test_AC011_week_boundary 0ms
+   × test_AC012 1ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 24 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/acceptance.test.ts > test_AC001
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/acceptance.test.ts:28:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/24]⎯
+
+ FAIL  tests/acceptance.test.ts > test_AC002
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/acceptance.test.ts:59:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/24]⎯
+
+ FAIL  tests/acceptance.test.ts > test_AC002_confirm
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/acceptance.test.ts:91:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/24]⎯
+
+ FAIL  tests/acceptance.test.ts > test_AC003
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/acceptance.test.ts:145:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/24]⎯
+
+ FAIL  tests/acceptance.test.ts > test_AC004
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/acceptance.test.ts:173:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/24]⎯
+
+ FAIL  tests/acceptance.test.ts > test_AC005
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/acceptance.test.ts:193:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/24]⎯
+
+ FAIL  tests/acceptance.test.ts > test_AC006
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/acceptance.test.ts:221:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/24]⎯
+
+ FAIL  tests/acceptance.test.ts > test_AC007
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/acceptance.test.ts:262:19
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/24]⎯
+
+ FAIL  tests/acceptance.test.ts > test_AC008
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/acceptance.test.ts:343:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/24]⎯
+
+ FAIL  tests/acceptance.test.ts > test_AC009
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/acceptance.test.ts:395:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/24]⎯
+
+ FAIL  tests/acceptance.test.ts > test_AC010
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/acceptance.test.ts:420:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/24]⎯
+
+ FAIL  tests/acceptance.test.ts > test_AC010_reject
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/acceptance.test.ts:446:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/24]⎯
+
+ FAIL  tests/acceptance.test.ts > test_AC011
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/acceptance.test.ts:483:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/24]⎯
+
+ FAIL  tests/acceptance.test.ts > test_AC011_week_boundary
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/acceptance.test.ts:515:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/24]⎯
+
+ FAIL  tests/acceptance.test.ts > test_AC012
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/acceptance.test.ts:550:27
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/24]⎯
+
+ FAIL  tests/extra.test.ts > test_extra_different_dates
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/extra.test.ts:21:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/24]⎯
+
+ FAIL  tests/extra.test.ts > test_extra_unknown_id
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/extra.test.ts:36:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[17/24]⎯
+
+ FAIL  tests/extra.test.ts > test_extra_reschedule_conflict
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/extra.test.ts:62:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[18/24]⎯
+
+ FAIL  tests/extra.test.ts > test_extra_invalid_priority
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/extra.test.ts:89:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[19/24]⎯
+
+ FAIL  tests/extra.test.ts > test_extra_missing_deadline
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/extra.test.ts:118:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[20/24]⎯
+
+ FAIL  tests/extra.test.ts > test_extra_empty_filter
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/extra.test.ts:141:19
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[21/24]⎯
+
+ FAIL  tests/extra.test.ts > test_extra_subtasks_not_counted
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/extra.test.ts:162:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[22/24]⎯
+
+ FAIL  tests/extra.test.ts > test_extra_actual_not_inferred
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/extra.test.ts:187:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[23/24]⎯
+
+ FAIL  tests/extra.test.ts > test_extra_delete_session
+NotImplementedError: not_implemented: createCourse
+ ❯ createCourse src/coursework/manager.ts:19:9
+     17|   void input;
+     18|   void store;
+     19|   throw new NotImplementedError("createCourse");
+       |         ^
+     20| }
+     21|
+ ❯ tests/extra.test.ts:203:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[24/24]⎯
+
+
+ Test Files  2 failed (2)
+      Tests  24 failed (24)
+   Start at  20:01:36
+   Duration  133ms (transform 73ms, setup 0ms, import 93ms, tests 9ms, environment 0ms)
