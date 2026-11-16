@@ -106,10 +106,40 @@ export function updateAssignment(
   input: UpdateAssignmentInput,
   store: PersistenceStore,
 ): Assignment {
-  void assignmentId;
-  void input;
-  void store;
-  throw new NotImplementedError("updateAssignment");
+  const data = store.load();
+  const index = data.assignments.findIndex((item) => item.id === assignmentId);
+  if (index < 0) {
+    throw new StudyTrackError("not_found", "Record not found.");
+  }
+
+  if (input.title !== undefined && input.title === "") {
+    throw new StudyTrackError("validation_error", "Required values must be provided.");
+  }
+  if (input.deadline !== undefined && input.deadline === "") {
+    throw new StudyTrackError("validation_error", "Required values must be provided.");
+  }
+  if (input.priority !== undefined && !PRIORITIES.includes(input.priority)) {
+    throw new StudyTrackError("invalid_priority", "Priority must be Low, Medium, or High.");
+  }
+  if (input.status !== undefined && !STATUSES.includes(input.status)) {
+    throw new StudyTrackError(
+      "invalid_status",
+      "Status must be Not Started, In Progress, or Completed.",
+    );
+  }
+
+  const current = data.assignments[index]!;
+  const updated: Assignment = {
+    ...current,
+    title: input.title ?? current.title,
+    deadline: input.deadline ?? current.deadline,
+    priority: input.priority ?? current.priority,
+    estimatedMinutes: input.estimatedMinutes ?? current.estimatedMinutes,
+    status: input.status ?? current.status,
+  };
+  data.assignments[index] = updated;
+  store.save(data);
+  return updated;
 }
 
 export function previewDeleteAssignment(

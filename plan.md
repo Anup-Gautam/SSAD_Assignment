@@ -44,7 +44,7 @@ Domain-only app (no HTTP routes). Skeleton functions throw `NotImplementedError`
 - **Skeleton to fill in:** validation paths in `createAssignment` (same function as Slice 1)
 - **Depends on:** Slice 1
 - **Done when:** those two tests pass; Slice 1 tests still pass.
-- **Status:** not started
+- **Status:** done — `createAssignment` already enforces required fields and the Low/Medium/High priority set from contracts; verified `test_extra_invalid_priority` and `test_extra_missing_deadline` green with `test_AC001` still passing.
 
 ## Slice 3: Update assignment
 
@@ -56,7 +56,7 @@ Domain-only app (no HTTP routes). Skeleton functions throw `NotImplementedError`
 - **Skeleton to fill in:** `updateAssignment`
 - **Depends on:** Slice 1
 - **Done when:** `test_extra_unknown_id` passes; earlier greens stay green.
-- **Status:** not started
+- **Status:** done
 
 ## Slice 4: Subtasks
 
