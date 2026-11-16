@@ -56,7 +56,7 @@ Domain-only app (no HTTP routes). Skeleton functions throw `NotImplementedError`
 - **Skeleton to fill in:** `updateAssignment`
 - **Depends on:** Slice 1
 - **Done when:** `test_extra_unknown_id` passes; earlier greens stay green.
-- **Status:** not started
+- **Status:** done
 
 ## Slice 4: Subtasks
 
