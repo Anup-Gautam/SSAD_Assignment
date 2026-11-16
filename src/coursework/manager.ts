@@ -1,27 +1,40 @@
-import { NotImplementedError } from "../errors";
+import { NotImplementedError, StudyTrackError } from "../errors";
 import type {
   Assignment,
+  AssignmentStatus,
   Course,
   CreateAssignmentInput,
   CreateCourseInput,
   CreateSubtaskInput,
   DeletionPreview,
   PersistenceStore,
+  Priority,
   Subtask,
   UpdateAssignmentInput,
   UpdateCourseInput,
   UpdateSubtaskInput,
 } from "../types";
 
+const PRIORITIES: readonly Priority[] = ["Low", "Medium", "High"];
+const STATUSES: readonly AssignmentStatus[] = ["Not Started", "In Progress", "Completed"];
+
+function newId(): string {
+  return crypto.randomUUID();
+}
+
 export function createCourse(input: CreateCourseInput, store: PersistenceStore): Course {
-  void input;
-  void store;
-  throw new NotImplementedError("createCourse");
+  if (input.name === "") {
+    throw new StudyTrackError("validation_error", "Required values must be provided.");
+  }
+  const data = store.load();
+  const course: Course = { id: newId(), name: input.name };
+  data.courses.push(course);
+  store.save(data);
+  return course;
 }
 
 export function listCourses(store: PersistenceStore): Course[] {
-  void store;
-  throw new NotImplementedError("listCourses");
+  return store.load().courses;
 }
 
 export function updateCourse(
@@ -51,14 +64,41 @@ export function createAssignment(
   input: CreateAssignmentInput,
   store: PersistenceStore,
 ): Assignment {
-  void input;
-  void store;
-  throw new NotImplementedError("createAssignment");
+  if (input.courseId === "" || input.title === "" || input.deadline === "") {
+    throw new StudyTrackError("validation_error", "Required values must be provided.");
+  }
+  if (!PRIORITIES.includes(input.priority)) {
+    throw new StudyTrackError("invalid_priority", "Priority must be Low, Medium, or High.");
+  }
+  if (input.status !== undefined && !STATUSES.includes(input.status)) {
+    throw new StudyTrackError(
+      "invalid_status",
+      "Status must be Not Started, In Progress, or Completed.",
+    );
+  }
+
+  const data = store.load();
+  const course = data.courses.find((item) => item.id === input.courseId);
+  if (!course) {
+    throw new StudyTrackError("not_found", "Record not found.");
+  }
+
+  const assignment: Assignment = {
+    id: newId(),
+    courseId: input.courseId,
+    title: input.title,
+    deadline: input.deadline,
+    priority: input.priority,
+    estimatedMinutes: input.estimatedMinutes,
+    status: input.status ?? "Not Started",
+  };
+  data.assignments.push(assignment);
+  store.save(data);
+  return assignment;
 }
 
 export function listAssignments(store: PersistenceStore): Assignment[] {
-  void store;
-  throw new NotImplementedError("listAssignments");
+  return store.load().assignments;
 }
 
 export function updateAssignment(
