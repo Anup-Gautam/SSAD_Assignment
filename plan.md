@@ -44,7 +44,7 @@ Domain-only app (no HTTP routes). Skeleton functions throw `NotImplementedError`
 - **Skeleton to fill in:** validation paths in `createAssignment` (same function as Slice 1)
 - **Depends on:** Slice 1
 - **Done when:** those two tests pass; Slice 1 tests still pass.
-- **Status:** done (validation shipped with Slice 1 `createAssignment` general rules)
+- **Status:** not started
 
 ## Slice 3: Update assignment
 
